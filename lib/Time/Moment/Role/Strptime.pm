@@ -4,7 +4,7 @@ use Role::Tiny;
 use Carp ();
 use Time::Piece;
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 requires 'from_object';
 
