@@ -63,6 +63,17 @@
       }
    },
    "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/Grinnz/Time-Moment-Role-Strptime/issues"
+      },
+      "homepage" : "https://github.com/Grinnz/Time-Moment-Role-Strptime",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/Grinnz/Time-Moment-Role-Strptime.git",
+         "web" : "https://github.com/Grinnz/Time-Moment-Role-Strptime"
+      }
+   },
    "version" : "0.001",
    "x_Dist_Zilla" : {
       "perl" : {
