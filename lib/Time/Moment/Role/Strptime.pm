@@ -33,10 +33,9 @@ Time::Moment::Role::Strptime - strptime constructor for Time::Moment
 =head1 SYNOPSIS
 
   use Time::Moment;
-  use Role::Tiny ();
+  use With::Roles;
 
-  my $class = Role::Tiny->create_class_with_roles('Time::Moment', 'Time::Moment::Role::Strptime');
-  my $moment = $class->strptime('2019-06-01', '%Y-%m-%d');
+  my $moment = Time::Moment->with::roles('+Strptime')->strptime('2019-06-01', '%Y-%m-%d');
 
 =head1 DESCRIPTION
 
@@ -48,10 +47,9 @@ by a parsed offset); to interpret the parsed time in another time zone, you can
 use L<Time::Moment::Role::TimeZone>:
 
   use Time::Moment;
-  use Role::Tiny ();
+  use With::Roles;
 
-  my $class = Role::Tiny->create_class_with_roles('Time::Moment',
-    'Time::Moment::Role::Strptime', 'Time::Moment::Role::TimeZone');
+  my $class = Time::Moment->with::roles('+Strptime', '+TimeZone');
   my $moment = $class->strptime($input, $format)->with_system_offset_same_local;
 
   use DateTime::TimeZone::Olson 'olson_tz';
