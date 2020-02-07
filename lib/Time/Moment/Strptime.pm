@@ -1,5 +1,7 @@
 package Time::Moment::Strptime;
 
+use strict;
+use warnings;
 use Exporter 'import';
 use Time::Moment;
 use With::Roles;
