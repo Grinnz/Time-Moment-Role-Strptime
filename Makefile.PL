@@ -20,7 +20,8 @@ my %WriteMakefileArgs = (
     "Carp" => 0,
     "Role::Tiny" => "2.000001",
     "Time::Moment" => 0,
-    "Time::Piece" => 0
+    "Time::Piece" => 0,
+    "With::Roles" => 0
   },
   "TEST_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0,
@@ -41,7 +42,8 @@ my %FallbackPrereqs = (
   "Role::Tiny" => "2.000001",
   "Test::More" => "0.88",
   "Time::Moment" => 0,
-  "Time::Piece" => 0
+  "Time::Piece" => 0,
+  "With::Roles" => 0
 );
 
 
