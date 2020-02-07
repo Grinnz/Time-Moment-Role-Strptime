@@ -6,6 +6,8 @@ use Time::Piece;
 
 our $VERSION = '0.002';
 
+our @CARP_NOT = 'Time::Moment::Strptime';
+
 requires 'from_object';
 
 sub strptime {
@@ -49,12 +51,16 @@ use L<Time::Moment::Role::TimeZone>:
   use Time::Moment;
   use With::Roles;
 
-  my $class = Time::Moment->with::roles('+Strptime', '+TimeZone');
-  my $moment = $class->strptime($input, $format)->with_system_offset_same_local;
+  my $class = Time::Moment->with::roles('+Strptime');
+  my $moment = $class->strptime($input, $format)->with::roles('+TimeZone')
+    ->with_system_offset_same_local;
 
   use DateTime::TimeZone::Olson 'olson_tz';
   my $tz = olson_tz('America/Los_Angeles');
-  my $moment = $class->strptime($input, $format)->with_time_zone_offset_same_local($tz);
+  my $moment = $class->strptime($input, $format)->with::roles('+TimeZone')
+    ->with_time_zone_offset_same_local($tz);
+
+L<Time::Moment::Strptime> provides this constructor as a simple function.
 
 =head1 METHODS
 
@@ -87,4 +93,4 @@ This is free software, licensed under:
 
 =head1 SEE ALSO
 
-L<Time::Moment>
+L<Time::Moment>, L<Time::Moment::Strptime>

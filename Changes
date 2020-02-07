@@ -1,4 +1,5 @@
 {{$NEXT}}
+  - Add Time::Moment::Strptime to provide constructor as basic function
 
 0.001     2019-07-05 13:45:57 EDT
   - First release
